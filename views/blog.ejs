@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog yaratish</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            margin: 0;
+            background: linear-gradient(250deg, rgb(20, 172, 165), rgb(118, 20, 107));
+            color: #333;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .blogs {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .blog-item:last-child {
+            border-bottom: none;
+        }
+
+        .blog-item h2 {
+            margin: 0 0 10px;
+        }
+
+        .blog-item p {
+            margin: 0;
+        }
+        .blog-item span{
+            font-size: 12px;
+            font-weight: bold;
+    
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input, textarea {
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+
+        textarea {
+            height: 250px;
+            resize: vertical;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 10px;
+            background-color: #1bae9b;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #179d8a;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bloglar ro‘yxati</h1>
+
+    <div class="blogs">
+        <% if (blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+                <div class="blog-item">
+                    <h2><b>Sarlavha</b><%= blog.title %></h2>
+                    <p><b>Content</b><%= blog.content %></p>
+                    <hr>
+                    <span><%= blog.createdAt %></span>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p>Hozircha bloglar yo‘q.</p>
+        <% } %>
+    </div>
+
+    <form action="/api/users/blog" method="post">
+        <input type="text" name="title" placeholder="Sarlavha kiriting..." required>
+        <textarea name="content" placeholder="Matnni kiriting..." required></textarea>
+        <button type="submit">Blogni yaratish</button>
+    </form>
+
+</body>
+
+</html>
