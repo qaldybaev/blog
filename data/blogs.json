@@ -1,8 +1,30 @@
 [
   {
     "id": 1,
-    "title": "jhjgkyuftykrfyulfu",
-    "content": "ktkfghkfkyftyfty",
-    "createdAt": "05.03.2025, 13:31:17"
+    "userId": 1,
+    "title": "dfbsetrbwt",
+    "content": "ttbrthbwr",
+    "createdAt": "06.03.2025, 11:25:34"
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "title": "fgnbfgbnf",
+    "content": "srfgbnfb",
+    "createdAt": "06.03.2025, 11:27:04"
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "title": "dthrsth",
+    "content": "fthdryh",
+    "createdAt": "06.03.2025, 11:31:08"
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "title": "fgjdty",
+    "content": "rdyjtdjtedj",
+    "createdAt": "06.03.2025, 11:31:15"
   }
 ]
