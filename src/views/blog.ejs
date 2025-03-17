@@ -109,7 +109,7 @@
                 <h2><%= blog.title %></h2>
                 <p><%= blog.content %></p>
                 <hr>
-                <span><%= blog.createdAt %></span>
+                <span><%= new Date(blog.created_at).toLocaleString()  %></span>
             </div>
         <% }) %>
     <% } else { %>

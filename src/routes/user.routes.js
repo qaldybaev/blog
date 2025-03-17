@@ -7,9 +7,9 @@ const route = Router();
 
 route
     .get("/", getindex)
-    .get("/sginup", signup)
+    .get("/signup", signup)
     .post("/", createUser)
-    .post("/sginup", login)
+    .post("/signup", login)
     .get('/blog/:userId', getUserBlogs)
     .post("/blog", createBlog);
 
